@@ -1,5 +1,9 @@
 package string.problems;
 
+import java.util.Arrays;
+import java.util.Locale;
+
+
 public class Anagram {
 
     /*
@@ -9,6 +13,25 @@ public class Anagram {
     */
 
     public static void main(String[] args) {
+    checkAnagram("cat", "act");
+    checkAnagram("army","mary");
+    checkAnagram("FART","RAFT");
+    }
+
+    public static void checkAnagram(String word, String anagram){
+        char a [] = word.toLowerCase().toCharArray();
+        char b [] = anagram.toLowerCase().toCharArray();
+        Arrays.sort(a);
+        Arrays.sort(b);
+        boolean result = Arrays.equals(a,b);
+
+        if (result == true){
+            System.out.println("THIS IS AN ANAGRAM!");
+        }else {
+            System.out.println("THIS IS NOT AN ANAGRAM!");
+        }
+    }
+
 
     }
-}
+
