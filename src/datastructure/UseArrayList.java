@@ -1,6 +1,7 @@
 package datastructure;
 
 public class UseArrayList {
+    //use_array_list arraylist naming convention
 
     public static void main(String[] args) {
         /*

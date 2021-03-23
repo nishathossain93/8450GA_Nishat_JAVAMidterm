@@ -11,5 +11,33 @@ public class FindMissingNumber {
          */
         int[] array = new int[] {10, 2, 1, 4, 5, 3, 7, 8, 6};
 
+        int exceptvalue = exception(10);
+        missingNum(array, exceptvalue);
+
+    }
+    public static int missingNum(int[]array,int exception){
+        int missingNumber;
+        int sum = 0;
+        for(int n: array){
+            sum += n;
+        }
+
+        missingNumber = exception -sum;
+        System.out.println("The missing num is "+ missingNumber);
+        return missingNumber;
+    }
+
+
+    public static int exception (int n) {
+        int sum = 0;
+        int[] array = new int[n];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i + 1;
+        }
+        for (int s : array) {
+            sum += s;
+        }
+        return sum;
+
     }
 }
