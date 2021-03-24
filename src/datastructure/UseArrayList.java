@@ -1,5 +1,9 @@
 package datastructure;
 
+
+import java.util.ArrayList;
+import java.util.Iterator;
+
 public class UseArrayList {
     //use_array_list arraylist naming convention
 
@@ -10,7 +14,35 @@ public class UseArrayList {
          *
          * Store and retrieve data from/to a database table.
          */
+        ArrayList<Object> arrayList = new ArrayList<>();
+
+        arrayList.add(25);
+        arrayList.add(56);
+        arrayList.add(25);
+        arrayList.add(12);
+        arrayList.add(10);
+        arrayList.add(21);
+        arrayList.add(9);
+        System.out.println((arrayList));
+
+        arrayList.remove(3); // remove elements
+
+
+        for(Object num : arrayList){ // this is for each loop
+            System.out.println((num));
+
+            Iterator iterator = arrayList.iterator(); // use Iterator
+            while (iterator.hasNext()){
+                System.out.println(iterator.next());
+            }
+    }
+
+
 
     }
 
+
 }
+
+
+
